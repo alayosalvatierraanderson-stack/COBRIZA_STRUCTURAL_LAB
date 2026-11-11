@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cobriza Structural Lab</title>
+
+    <!-- Conexión con nuestro diseño CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script type="importmap">
+{
+    "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"
+    }
+}
+</script>
+
+<body>
+
+    <header class="encabezado">
+        <div class="marca">
+            <span class="simbolo">CSL</span>
+            <div>
+                <h1>COBRIZA STRUCTURAL LAB</h1>
+                <p>INGENIERÍA · ANÁLISIS ESTRUCTURAL</p>
+            </div>
+        </div>
+
+        <span class="estado">PROYECTO ACADÉMICO</span>
+    </header>
+
+    <main class="contenedor">
+
+        <section class="presentacion">
+            <p class="etiqueta">RESISTENCIA DE MATERIALES</p>
+
+            <h2>
+                Análisis estructural de una
+                <span>galería minera</span>
+            </h2>
+
+            <p class="descripcion">
+                Prototipo digital interactivo basado en el caso
+                de sostenimiento de la mina Cobriza, Huancavelica.
+            </p>
+        </section>
+
+        <section class="panel-principal">
+
+            <div class="modelo">
+                <p class="etiqueta">VISUALIZACIÓN DEL SISTEMA</p>
+
+                <div class="espacio-modelo">
+    <div id="modelo3d"></div>
+
+<button id="botonShotcrete" type="button">
+    Ocultar shotcrete
+</button>
+
+<button id="botonMalla" type="button">
+    Ocultar malla
+</button>
+
+    <p class="instruccion-3d">
+        Arrastra para rotar · Rueda para acercar o alejar
+    </p>
+</div>
+            </div>
+
+            <aside class="informacion">
+                <p class="etiqueta">INFORMACIÓN DEL PROYECTO</p>
+
+                <h3>Sistema de sostenimiento</h3>
+
+                <div class="dato">
+                    <span>Ancho de referencia</span>
+                    <strong>6.00 m</strong>
+                </div>
+
+                <div class="dato">
+                    <span>Altura de referencia</span>
+                    <strong>4.00 m</strong>
+                </div>
+
+                <div class="dato">
+                    <span>Shotcrete</span>
+                    <strong>0.15 m</strong>
+                </div>
+
+                <div class="dato">
+                    <span>Separación de arcos</span>
+                    <strong>0.45 m</strong>
+                </div>
+
+                <p class="nota">
+                    Dimensiones correspondientes al caso
+                    técnico de referencia. Se verificará
+                    la geometría antes del análisis.
+                </p>
+
+<div class="panel-elemento">
+
+    <h3>Inspección de elementos</h3>
+
+    <label for="selectorArco">
+        Seleccionar arco de sostenimiento:
+    </label>
+
+    <select id="selectorArco">
+        <option value="">Selecciona un arco</option>
+    </select>
+
+    <div id="resultadoElemento" class="resultado-elemento">
+
+        <p>
+            Selecciona un arco para consultar
+            sus propiedades geométricas.
+        </p>
+
+    </div>
+
+</div>
+
+            </aside>
+
+        </section>
+
+        <section class="modulos">
+            <p class="etiqueta">MÓDULOS DE ANÁLISIS</p>
+
+            <div class="tarjetas">
+
+                <article class="tarjeta">
+                    <span class="numero">01</span>
+                    <h3>Estado biaxial</h3>
+                    <p>
+                        Análisis de esfuerzos normales,
+                        cortantes y principales.
+                    </p>
+                    <span class="enlace">PRÓXIMAMENTE</span>
+                </article>
+
+                <article class="tarjeta">
+                    <span class="numero">02</span>
+                    <h3>Esfuerzos combinados</h3>
+                    <p>
+                        Evaluación de esfuerzos producidos
+                        por diferentes solicitaciones.
+                    </p>
+                    <span class="enlace">PRÓXIMAMENTE</span>
+                </article>
+
+                <article class="tarjeta">
+                    <span class="numero">03</span>
+                    <h3>Deformaciones</h3>
+                    <p>
+                        Análisis de desplazamientos
+                        y deformaciones estructurales.
+                    </p>
+                    <span class="enlace">PRÓXIMAMENTE</span>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>COBRIZA STRUCTURAL LAB · PROYECTO ACADÉMICO</p>
+        <p>Resistencia de Materiales</p>
+    </footer>
+<script type="module" src="modelo3d.js"></script>
+</body>
+</html>
+
+

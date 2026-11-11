@@ -1,0 +1,385 @@
+
+/* CONFIGURACION GENERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #101722;
+    color: #f1f5f9;
+    font-family: Arial, sans-serif;
+}
+
+/* ENCABEZADO */
+
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 7%;
+    border-bottom: 1px solid #293747;
+    background: #141f2c;
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.simbolo {
+    background: #d6a443;
+    color: #101722;
+    padding: 12px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.marca h1 {
+    font-size: 17px;
+    letter-spacing: 2px;
+}
+
+.marca p {
+    font-size: 10px;
+    color: #9caaba;
+    margin-top: 5px;
+    letter-spacing: 2px;
+}
+
+.estado {
+    color: #d6a443;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+/* CONTENIDO PRINCIPAL */
+
+.contenedor {
+    width: 86%;
+    max-width: 1300px;
+    margin: auto;
+}
+
+.presentacion {
+    padding: 65px 0 35px;
+}
+
+.etiqueta {
+    color: #d6a443;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+.presentacion h2 {
+    font-size: 39px;
+    max-width: 700px;
+    line-height: 1.2;
+}
+
+.presentacion h2 span {
+    color: #d6a443;
+}
+
+.descripcion {
+    color: #a8b4c2;
+    margin-top: 17px;
+    line-height: 1.7;
+}
+
+/* PANEL PRINCIPAL */
+
+.panel-principal {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+.modelo,
+.informacion {
+    background: #182433;
+    border: 1px solid #2c3b4d;
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.espacio-modelo {
+    min-height: 310px;
+    background: #101a27;
+    border: 1px dashed #526174;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.icono-modelo {
+    width: 75px;
+    height: 75px;
+    border: 2px solid #d6a443;
+    color: #d6a443;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.espacio-modelo h3 {
+    margin-bottom: 10px;
+}
+
+.espacio-modelo p {
+    color: #a8b4c2;
+    font-size: 13px;
+}
+
+.proximo {
+    color: #d6a443;
+    font-size: 10px;
+    margin-top: 20px;
+    letter-spacing: 2px;
+}
+
+/* INFORMACION TECNICA */
+
+.informacion h3 {
+    margin-bottom: 25px;
+}
+
+.dato {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 0;
+    border-bottom: 1px solid #304052;
+    gap: 10px;
+}
+
+.dato span {
+    color: #a8b4c2;
+    font-size: 12px;
+}
+
+.dato strong {
+    color: #d6a443;
+}
+
+.nota {
+    color: #91a0b0;
+    font-size: 11px;
+    line-height: 1.6;
+    margin-top: 20px;
+}
+
+/* MODULOS */
+
+.modulos {
+    padding: 55px 0;
+}
+
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.tarjeta {
+    background: #182433;
+    border: 1px solid #2c3b4d;
+    border-radius: 9px;
+    padding: 25px;
+}
+
+.numero {
+    color: #d6a443;
+    font-size: 12px;
+}
+
+.tarjeta h3 {
+    margin: 17px 0 12px;
+    font-size: 17px;
+}
+
+.tarjeta p {
+    color: #a8b4c2;
+    font-size: 13px;
+    line-height: 1.6;
+    min-height: 65px;
+}
+
+.enlace {
+    display: inline-block;
+    color: #d6a443;
+    font-size: 10px;
+    margin-top: 18px;
+    letter-spacing: 1px;
+}
+
+/* PIE DE PAGINA */
+
+footer {
+    border-top: 1px solid #293747;
+    padding: 25px 7%;
+    display: flex;
+    justify-content: space-between;
+    color: #8291a2;
+    font-size: 11px;
+}
+
+/* ADAPTACION A PANTALLAS PEQUEÑAS */
+
+@media (max-width: 800px) {
+    .panel-principal {
+        grid-template-columns: 1fr;
+    }
+
+    .tarjetas {
+        grid-template-columns: 1fr;
+    }
+
+    .presentacion h2 {
+        font-size: 30px;
+    }
+
+    .estado {
+        display: none;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+/* VISUALIZADOR 3D */
+
+.espacio-modelo {
+    padding: 10px;
+    display: block;
+    overflow: hidden;
+}
+
+#modelo3d {
+    width: 100%;
+    height: 420px;
+    background: #101a27;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+#modelo3d canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.instruccion-3d {
+    text-align: center;
+    color: #a8b4c2;
+    font-size: 11px;
+    padding: 12px;
+}
+
+/* CONTROL DEL SHOTCRETE */
+
+#botonShotcrete {
+    display: block;
+    margin: 12px auto 0;
+    background: #d6a443;
+    color: #101722;
+    border: none;
+    padding: 11px 18px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#botonShotcrete:hover {
+    background: #f0c76b;
+}
+
+/* CONTROL DE LA MALLA */
+
+#botonMalla {
+    display: block;
+    margin: 10px auto;
+    background: #28b8d4;
+    color: #101722;
+    border: none;
+    padding: 11px 18px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#botonMalla:hover {
+    background: #6adbed;
+}
+
+/* PANEL DE INSPECCION ESTRUCTURAL */
+
+.panel-elemento {
+    margin-top: 28px;
+    padding-top: 22px;
+    border-top: 1px solid #35465a;
+}
+
+.panel-elemento h3 {
+    font-size: 17px;
+    margin-bottom: 18px;
+    color: #f1f5f9;
+}
+
+.panel-elemento label {
+    display: block;
+    color: #a8b4c2;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+#selectorArco {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #526174;
+    background: #101a27;
+    color: #f1f5f9;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.resultado-elemento {
+    margin-top: 18px;
+    padding: 16px;
+    border-radius: 7px;
+    background: #101a27;
+    border: 1px solid #304052;
+    color: #a8b4c2;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.resultado-elemento strong {
+    color: #d6a443;
+}
+
+.resultado-elemento h4 {
+    color: #f1f5f9;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.formula-elemento {
+    padding: 10px;
+    background: #1b2a3e;
+    border-radius: 5px;
+    color: #e3c577;
+    margin: 12px 0;
+    overflow-wrap: anywhere;
+}
